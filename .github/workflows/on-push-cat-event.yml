@@ -1,0 +1,11 @@
+name: on-push-cat-event
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest    
+    steps:
+    - name: concatenate the contents of $GITHUB_EVENT_PATH
+      run: |
+        cat $GITHUB_EVENT_PATH
